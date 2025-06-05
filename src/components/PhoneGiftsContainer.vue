@@ -1,12 +1,16 @@
 <script lang="ts" setup>
 import GiftImage from '@/assets/phoneGifts.jpg'
+
+const emit = defineEmits<{
+  (e: 'onClick'): void
+}>()
 </script>
 <template>
   <div class="token-section">
     <div class="text-content">
       <h1>Your Customized Token<br />For Globally Compliant<br />Distribution Events</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-      <button class="get-started">Get Started</button>
+      <button class="get-started" @click="emit('onClick')">Get Started</button>
     </div>
     <div class="graphic">
       <img :src="GiftImage" alt="Token Graphic" />

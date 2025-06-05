@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import TeamImage from '@/assets/team.jpg'
+
+const emit = defineEmits<{
+  (e: 'onClick'): void
+}>()
 </script>
 
 <template>
@@ -11,7 +15,7 @@ import TeamImage from '@/assets/team.jpg'
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua erat volutpat.
         </p>
-        <button class="search-btn">SEARCH</button>
+        <button class="search-btn" @click="emit('onClick')">SEARCH</button>
       </div>
       <div class="image-section">
         <img :src="TeamImage" alt="Team" />
