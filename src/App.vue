@@ -25,7 +25,7 @@ nav {
   width: 100%;
   font-size: 16px;
   text-align: center;
-  height: 50px;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
